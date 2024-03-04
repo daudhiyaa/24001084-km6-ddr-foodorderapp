@@ -2,4 +2,6 @@
     <string name="app_name">FoodOrderApp</string>
     <string name="institut_teknologi_sepuluh_nopember">Institut Teknologi Sepuluh Nopember</string>
     <string name="my_name">Daud Dhiya\' Rozaan</string>
+    <string name="hi_name">Hi, Daud!</string>
+    <string name="what_you_gonna_eat_this_day">What you gonna eat this day?</string>
 </resources>
