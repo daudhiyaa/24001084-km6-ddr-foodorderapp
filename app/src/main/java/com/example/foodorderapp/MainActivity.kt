@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
 import com.example.foodorderapp.databinding.ActivityMainBinding
+import com.example.foodorderapp.model.Category
 
 // === Manual ===
 /*
@@ -49,11 +50,26 @@ class MainActivity : AppCompatActivity() {
         ActivityMainBinding.inflate(layoutInflater)
     }
 
+    private val adapter = CategoryAdapter()
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
         setAction()
         changeProfileContent()
+    }
+
+    private fun setListCategory() {
+        val data = listOf(
+            Category(image = R.drawable.discount, name = "Category 1"),
+            Category(image = R.drawable.discount, name = "Category 2"),
+            Category(image = R.drawable.discount, name = "Category 3"),
+            Category(image = R.drawable.discount, name = "Category 4")
+        )
+        binding.rvCategory.apply {
+            adapter = this@MainActivity.adapter
+        }
+        adapter.submitData(data)
     }
 
     private fun setAction(){
