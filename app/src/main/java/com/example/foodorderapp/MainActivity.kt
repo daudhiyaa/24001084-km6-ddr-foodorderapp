@@ -1,19 +1,39 @@
 package com.example.foodorderapp
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
+import com.example.foodorderapp.adapter.CatalogueAdapter
+import com.example.foodorderapp.adapter.CategoryAdapter
+import com.example.foodorderapp.constant.catalogueData
+import com.example.foodorderapp.constant.categoryData
+import com.example.foodorderapp.databinding.ActivityMainBinding
 
-// Diawali huruf besar, Passive
 class MainActivity : AppCompatActivity() {
-    // passive
-    private val name: String = "Name"
+    private val binding: ActivityMainBinding by lazy {
+        ActivityMainBinding.inflate(layoutInflater)
+    }
 
-    // active
-    private val isOpen: Boolean = true
+    private val categoryAdapter = CategoryAdapter()
+    private val catalogueAdapter = CatalogueAdapter()
 
-    // diawali huruf kecil, active
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        setContentView(binding.root)
+        setListCategory()
+        setListCatalogue()
+    }
+
+    private fun setListCategory() {
+        binding.rvCategory.apply {
+            adapter = this@MainActivity.categoryAdapter
+        }
+        categoryAdapter.submitData(categoryData)
+    }
+
+    private fun setListCatalogue() {
+        binding.rvCatalogue.apply {
+            adapter = this@MainActivity.catalogueAdapter
+        }
+        catalogueAdapter.submitData(catalogueData)
     }
 }
