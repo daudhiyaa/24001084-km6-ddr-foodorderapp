@@ -8,5 +8,5 @@ data class Catalogue(
     @DrawableRes
     var image: Int,
     var name: String,
-    var Price: Double,
+    var price: Double,
 )
