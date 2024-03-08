@@ -1,84 +1,39 @@
 package com.example.foodorderapp
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
+import com.example.foodorderapp.adapter.CatalogueAdapter
+import com.example.foodorderapp.adapter.CategoryAdapter
+import com.example.foodorderapp.constant.catalogueData
+import com.example.foodorderapp.constant.categoryData
 import com.example.foodorderapp.databinding.ActivityMainBinding
-import com.example.foodorderapp.model.Category
 
-// === Manual ===
-/*
 class MainActivity : AppCompatActivity() {
-
-    private var ivProfile: ImageView? = null
-
-    // by lazy = hanya diinisialisasi saat ia dipanggil
-    private val tvName : TextView by lazy {
-        findViewById(R.id.tv_greeting)
-    }
-
-    private val binding : ActivityMainBinding by lazy {
-        ActivityMainBinding.inflate(layoutInflater)
-    }
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
-        bind()
-        setAction()
-        changeProfileContent()
-    }
-
-    private fun bind() {
-        ivProfile = findViewById(R.id.iv_profile_menu)
-    }
-
-    private fun setAction(){
-        ivProfile?.setOnClickListener {
-            Toast.makeText(this@MainActivity, "This is toast text", Toast.LENGTH_LONG).show()
-        }
-    }
-
-    private fun changeProfileContent() {
-        ivProfile?.setImageResource(R.drawable.ic_launcher_background)
-    }
-}
- */
-
-// use activity binding
-class MainActivity : AppCompatActivity() {
-    private val binding : ActivityMainBinding by lazy {
+    private val binding: ActivityMainBinding by lazy {
         ActivityMainBinding.inflate(layoutInflater)
     }
 
-    private val adapter = CategoryAdapter()
+    private val categoryAdapter = CategoryAdapter()
+    private val catalogueAdapter = CatalogueAdapter()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
-        setAction()
-        changeProfileContent()
+        setListCategory()
+        setListCatalogue()
     }
 
     private fun setListCategory() {
-        val data = listOf(
-            Category(image = R.drawable.discount, name = "Category 1"),
-            Category(image = R.drawable.discount, name = "Category 2"),
-            Category(image = R.drawable.discount, name = "Category 3"),
-            Category(image = R.drawable.discount, name = "Category 4")
-        )
         binding.rvCategory.apply {
-            adapter = this@MainActivity.adapter
+            adapter = this@MainActivity.categoryAdapter
         }
-        adapter.submitData(data)
+        categoryAdapter.submitData(categoryData)
     }
 
-    private fun setAction(){
-        binding.layoutHeader.ivProfileMenu.setOnClickListener {
-            Toast.makeText(this@MainActivity, "This is toast text", Toast.LENGTH_LONG).show()
+    private fun setListCatalogue() {
+        binding.rvCatalogue.apply {
+            adapter = this@MainActivity.catalogueAdapter
         }
-    }
-
-    private fun changeProfileContent() {
-        binding.layoutHeader.ivProfileMenu.setImageResource(R.drawable.ic_launcher_background)
+        catalogueAdapter.submitData(catalogueData)
     }
 }

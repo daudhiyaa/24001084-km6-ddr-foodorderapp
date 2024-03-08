@@ -14,7 +14,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:scaleType="centerCrop"
-            android:src="@drawable/bg_banner"/>
+            android:src="@drawable/bg_banner4"/>
 
         <View
             android:background="@drawable/bg_black_gradient_banner"
@@ -42,9 +42,9 @@
                 android:layout_marginHorizontal="8dp"
                 android:ellipsize="end"
                 android:maxLines="2"
-                android:text="Text Banner"
+                android:text="@string/banner_title"
                 android:textColor="@color/white"
-                android:textSize="18sp"
+                android:textSize="22sp"
                 android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/iv_icon_banner"
@@ -58,7 +58,7 @@
                 android:layout_marginTop="8dp"
                 android:ellipsize="end"
                 android:maxLines="2"
-                android:text="Text Description Banner"
+                android:text="@string/banner_desc"
                 android:textColor="@color/white"
                 android:textSize="14sp"
                 app:layout_constraintEnd_toEndOf="parent"

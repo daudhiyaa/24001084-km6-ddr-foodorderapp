@@ -1,4 +1,4 @@
-package com.example.foodorderapp
+package com.example.foodorderapp.adapter
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
@@ -12,6 +12,7 @@ class CategoryAdapter : RecyclerView.Adapter<CategoryAdapter.CategoryViewHolder>
     fun submitData(items: List<Category>) {
         data.addAll(items)
     }
+
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CategoryViewHolder {
         return CategoryViewHolder(
             ItemCategoryBinding.inflate(
@@ -28,8 +29,8 @@ class CategoryAdapter : RecyclerView.Adapter<CategoryAdapter.CategoryViewHolder>
         holder.bind(data[position])
     }
 
-    class CategoryViewHolder(private val binding: ItemCategoryBinding)
-        : RecyclerView.ViewHolder(binding.root) {
+    class CategoryViewHolder(private val binding: ItemCategoryBinding) :
+        RecyclerView.ViewHolder(binding.root) {
         fun bind(item: Category) {
             binding.ivCategoryImage.setImageResource(item.image)
             binding.ivCategoryName.text = item.name
