@@ -7,4 +7,5 @@
     <string name="banner_title">Solo Food</string>
     <string name="banner_desc">Up to 50% Discount</string>
     <string name="text_catalogue_header">Food Menu List</string>
+    <string name="location_title">Lokasi</string>
 </resources>
