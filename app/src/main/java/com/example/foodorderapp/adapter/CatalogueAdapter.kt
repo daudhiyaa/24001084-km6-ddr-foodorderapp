@@ -4,13 +4,13 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.foodorderapp.databinding.ItemCatalogueBinding
-import com.example.foodorderapp.model.Catalogue
+import com.example.foodorderapp.data.model.Food
 import com.example.foodorderapp.utils.toIndonesianFormat
 
 class CatalogueAdapter : RecyclerView.Adapter<CatalogueAdapter.CatalogueViewHolder>() {
-    private val data = mutableListOf<Catalogue>()
+    private val data = mutableListOf<Food>()
 
-    fun submitData(items: List<Catalogue>) {
+    fun submitData(items: List<Food>) {
         data.addAll(items)
     }
 
@@ -32,7 +32,7 @@ class CatalogueAdapter : RecyclerView.Adapter<CatalogueAdapter.CatalogueViewHold
 
     class CatalogueViewHolder(private val binding: ItemCatalogueBinding) :
         RecyclerView.ViewHolder(binding.root) {
-        fun bind(item: Catalogue) {
+        fun bind(item: Food) {
             binding.ivCatalogueImage.setImageResource(item.image)
             binding.ivCatalogueName.text = item.name
             binding.ivCataloguePrice.text = item.price.toIndonesianFormat()

@@ -4,8 +4,8 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.example.foodorderapp.adapter.CatalogueAdapter
 import com.example.foodorderapp.adapter.CategoryAdapter
-import com.example.foodorderapp.constant.catalogueData
-import com.example.foodorderapp.constant.categoryData
+import com.example.foodorderapp.data.datasource.catalogueData
+import com.example.foodorderapp.data.datasource.categoryData
 import com.example.foodorderapp.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
