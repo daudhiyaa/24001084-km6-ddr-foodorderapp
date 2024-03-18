@@ -7,7 +7,7 @@
     android:background="@color/white"
     android:paddingHorizontal="8dp"
     android:paddingVertical="8dp"
-    tools:context=".MainActivity">
+    tools:context=".presentation.main.MainActivity">
 
     <include
         android:id="@+id/layout_header"

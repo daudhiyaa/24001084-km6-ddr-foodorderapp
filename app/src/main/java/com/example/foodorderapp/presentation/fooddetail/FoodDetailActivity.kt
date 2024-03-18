@@ -1,10 +1,10 @@
-package com.example.foodorderapp
+package com.example.foodorderapp.presentation.fooddetail
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.example.foodorderapp.databinding.ActivityDetailBinding
 
-class DetailActivity : AppCompatActivity() {
+class FoodDetailActivity : AppCompatActivity() {
 
     private val binding : ActivityDetailBinding by lazy {
         ActivityDetailBinding.inflate(layoutInflater)

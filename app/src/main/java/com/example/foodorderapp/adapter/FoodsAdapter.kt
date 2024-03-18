@@ -7,7 +7,7 @@ import com.example.foodorderapp.databinding.ItemCatalogueBinding
 import com.example.foodorderapp.data.model.Food
 import com.example.foodorderapp.utils.toIndonesianFormat
 
-class CatalogueAdapter : RecyclerView.Adapter<CatalogueAdapter.CatalogueViewHolder>() {
+class FoodsAdapter : RecyclerView.Adapter<FoodsAdapter.CatalogueViewHolder>() {
     private val data = mutableListOf<Food>()
 
     fun submitData(items: List<Food>) {

@@ -1,8 +1,8 @@
-package com.example.foodorderapp
+package com.example.foodorderapp.presentation.main
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import com.example.foodorderapp.adapter.CatalogueAdapter
+import com.example.foodorderapp.adapter.FoodsAdapter
 import com.example.foodorderapp.adapter.CategoryAdapter
 import com.example.foodorderapp.data.datasource.catalogueData
 import com.example.foodorderapp.data.datasource.categoryData
@@ -14,7 +14,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     private val categoryAdapter = CategoryAdapter()
-    private val catalogueAdapter = CatalogueAdapter()
+    private val foodsAdapter = FoodsAdapter()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -32,8 +32,8 @@ class MainActivity : AppCompatActivity() {
 
     private fun setListCatalogue() {
         binding.rvCatalogue.apply {
-            adapter = this@MainActivity.catalogueAdapter
+            adapter = this@MainActivity.foodsAdapter
         }
-        catalogueAdapter.submitData(catalogueData)
+        foodsAdapter.submitData(catalogueData)
     }
 }
