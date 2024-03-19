@@ -1,18 +1,18 @@
-# Challenge 2 - BINAR Academy - KM6
+# Challenge - Android Engineering Path - BINAR Academy - KM6
 
 | Name        | University                          |
 |-------------|-------------------------------------|
 | Daud Dhiya' | Institut Teknologi Sepuluh Nopember |
 
-## Challenge
+## About
 
-Create a Layout of Food Order App using XML Kotlin
+This repository contains all challenges (from Challenge 2) encountered during the learning process
+at Binar Academy - KM 6, within the Android Engineering Path.
 
-Note : Use LinearLayout, ConstraintLayout, FrameLayout, CardView, RecyclerView, etc
+## Note
 
-## Explanation of Source Code (`app/src/main/` directory)
+Each branch represents the final outcome of each challenge within a chapter. Check it out to see the
+progress of each challenge/application in each chapter.
 
-1. `adapter/` : contains all adapter for RecyclerView
-2. `constant/` : contains all constant data
-3. `model/` : contains all objects model (interface, class, or data-class)
-4. `utils/` : contains all utility function
+Otherwise, the `main` branch contains the final result of the developed application (which evolves as the
+chapters progress).
