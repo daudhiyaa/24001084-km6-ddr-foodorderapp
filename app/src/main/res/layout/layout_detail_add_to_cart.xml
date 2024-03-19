@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     app:cardElevation="18dp"
+    android:backgroundTint="@color/white"
     app:layout_constraintBottom_toBottomOf="parent">
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -24,7 +25,9 @@
                 android:layout_width="30dp"
                 android:layout_height="30dp"
                 android:padding="8dp"
+                android:background="@drawable/bordered_button"
                 android:scaleType="fitCenter"
+                android:layout_marginEnd="4dp"
                 android:src="@drawable/ic_minus" />
 
             <TextView
@@ -33,7 +36,8 @@
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="4dp"
                 android:gravity="end"
-                android:text="1" />
+                android:textColor="@color/black"
+                android:text="@string/text_counter_placeholder" />
 
             <ImageButton
                 android:id="@+id/btn_increment"
@@ -41,16 +45,20 @@
                 android:layout_height="30dp"
                 android:padding="8dp"
                 android:scaleType="fitCenter"
+                android:layout_marginStart="4dp"
+                android:background="@drawable/bordered_button"
                 android:src="@drawable/ic_plus" />
 
         </LinearLayout>
 
         <Button
+            android:id="@+id/btn_add_to_cart"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Tambah ke Keranjang - Rp 18.000"
+            android:text="@string/text_add_to_cart_btn_placeholder"
             android:textColor="@color/black"
             android:textStyle="bold"
+            android:layout_marginTop="8dp"
             app:backgroundTint="#C0C0C0"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintTop_toBottomOf="@id/ll_btn_counter" />

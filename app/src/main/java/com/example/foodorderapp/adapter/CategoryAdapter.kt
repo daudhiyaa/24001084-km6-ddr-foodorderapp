@@ -4,7 +4,7 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.foodorderapp.databinding.ItemCategoryBinding
-import com.example.foodorderapp.model.Category
+import com.example.foodorderapp.data.model.Category
 
 class CategoryAdapter : RecyclerView.Adapter<CategoryAdapter.CategoryViewHolder>() {
     private val data = mutableListOf<Category>()
