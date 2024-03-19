@@ -18,8 +18,9 @@
         <com.google.android.material.imageview.ShapeableImageView
             android:id="@+id/iv_category_image"
             tools:src="@tools:sample/avatars"
-            android:layout_width="80dp"
-            android:layout_height="80dp"/>
+            android:padding="8dp"
+            android:layout_width="60dp"
+            android:layout_height="60dp"/>
         
         <TextView
             android:id="@+id/iv_category_name"
