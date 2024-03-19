@@ -4,12 +4,12 @@
 |-------------|-------------------------------------|
 | Daud Dhiya' | Institut Teknologi Sepuluh Nopember |
 
-## About
+## ⚙️ About
 
 This repository contains all challenges (from Challenge 2) encountered during the learning process
 at Binar Academy - KM 6, within the Android Engineering Path.
 
-## Note
+## 📝 Note
 
 Each branch represents the final outcome of each challenge within a chapter. Check it out to see the
 progress of each challenge/application in each chapter.
