@@ -13,4 +13,5 @@
     <string name="food_desc_placeholder">Food Description</string>
     <string name="text_add_to_cart_btn_placeholder">Tambah ke Keranjang - Rp 18.000</string>
     <string name="text_counter_placeholder">1</string>
+    <string name="tambah_ke_keranjang">Tambah ke Keranjang - %1$s</string>
 </resources>
