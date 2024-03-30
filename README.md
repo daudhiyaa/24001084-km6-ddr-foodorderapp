@@ -6,7 +6,7 @@
 
 ## ⚙️ About
 
-This repository contains all challenges (from Challenge 2) encountered during the learning process
+This repository contains challenges (Chaoter 2 & 3) encountered during the learning process
 at Binar Academy - KM 6, within the Android Engineering Path.
 
 ## 📝 Note
